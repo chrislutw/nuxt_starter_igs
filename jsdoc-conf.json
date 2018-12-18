@@ -1,0 +1,31 @@
+{
+  "plugins": ["node_modules/jsdoc-vuejs", "plugins/markdown"],
+  "recurseDepth": 10,
+  "source": {
+    "include": ["src/", "README.md", "package.json"],
+    "includePattern": ".+\\.(js|vue)?$",
+    "excludePattern": "(^|\\/|\\\\)_",
+    "exclude": ["src/static"]
+  },
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "templates": {
+    "linenums": true,
+    "theme": "slate",
+    "outputSourceFiles": false,
+    "collapseSymbols": false,
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "syntaxTheme": "dark",
+    "dateFormat": "YYYY/MM/DD",
+    "systemName": "WebTeamDoc",
+    "copyright": "IGS RD6 WebTeam Copyright © 2018 The Contributors to CloudArcade project."
+  },
+  "opts": {
+    "destination": "docs/",
+    "template": "./node_modules/ink-docstrap/template",
+    "encoding": "utf8",
+    "recurse": true
+  }
+}

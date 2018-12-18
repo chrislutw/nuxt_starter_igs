@@ -1,4 +1,17 @@
 {
+  "eslintIntegration": true,
   "semi": false,
-  "singleQuote": true
+  "tabWidth": 2,
+  "singleQuote": true,
+  "disableLanguages": ["scss"],
+  "printWidth": 120,
+  "proseWrap": "never",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }
