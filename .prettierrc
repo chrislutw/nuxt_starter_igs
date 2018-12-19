@@ -1,11 +1,9 @@
 {
-  "eslintIntegration": true,
   "semi": false,
   "tabWidth": 2,
   "singleQuote": true,
-  "disableLanguages": ["scss"],
   "printWidth": 120,
-  "proseWrap": "never",
+  "proseWrap": "always",
   "overrides": [
     {
       "files": ".prettierrc",

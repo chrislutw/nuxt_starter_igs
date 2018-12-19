@@ -1,11 +1,13 @@
 module.exports = {
   root: true,
   env: {
+    es6: true,
     browser: true,
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 6
   },
   extends: ['plugin:vue/recommended', 'plugin:prettier/recommended'],
   // required to lint *.vue files
@@ -23,6 +25,7 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow Import Export Everywhere
     allowImportExportEverywhere: 0,
+    "vue/max-attributes-per-line": 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }

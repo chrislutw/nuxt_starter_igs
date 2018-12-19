@@ -1,0 +1,33 @@
+:root {
+    --background-color: #fff;
+    --font-color:       #fff;
+    --link-color:       #fff;
+    --font-size:        16px;
+    --font-weight:      400;
+    // --primary-font: 'Roboto', Helvetica, 'Noto Sans TC',\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4, Arial, sans-serif;
+    --primary-font: 'Roboto', Helvetica, \5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4, Arial, sans-serif;
+
+    // @media(min-width: 414px) { --font-size: 18px;  }
+    // @media(min-width: 600px) { --font-size: 20px;  }
+
+
+    //manager z-index
+    --z-loading:   99999;
+    --z-mask:      9999;
+    --z-header:    9998;
+    --z-footer:    9998;
+    --z-side:      9997;
+    --z-nav:       3333;
+    --z-subnav:    222;
+    --z-store:     111;
+    --z-headerinfo:2;
+    --z-downselect:1;
+
+    //
+    --h-header:  3.125rem;
+    --h-footer:  3.5rem;
+    --w-side:    240px;
+    --w-list-title: 5.2rem;
+    --w-title-6:    6.5rem;
+
+}
