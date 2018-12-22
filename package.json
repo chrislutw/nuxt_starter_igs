@@ -13,10 +13,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.6.3",
+    "@fortawesome/free-regular-svg-icons": "^5.6.3",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.3.0",
     "vue-i18n": "^8.5.0"
   },
   "devDependencies": {

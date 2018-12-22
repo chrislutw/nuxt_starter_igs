@@ -5,7 +5,7 @@
         <a tabindex="0" @click="showLangMenu = !showLangMenu" @blur="showLangMenu = false">
           <img src="~/assets/images/icon-lang-zh_Hans.png" alt>
           {{ currentLangShortName }}
-          <font-awesome-icon icon="angle-down"/>
+          <fa icon="angle-down"/>
         </a>
       </div>
     </div>
