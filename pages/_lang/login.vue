@@ -48,6 +48,7 @@
       <!-- <div class="txt-error"><i class="fas fa-times fa-sm"></i> Email填寫格式不正確</div> -->
       <div class="btn-wrap">
         <button @click.prevent="login">{{ $t('login.LogIn') }}</button>
+        <nuxt-link to="/">go back index</nuxt-link>
       </div>
     </div>
   </div>
@@ -82,6 +83,15 @@ export default {
       passWord: ''
     }
   },
+  // server side code
+  asyncData() {
+    console.log('About Page is loading.')
+    return new Promise(resolve => {
+      setTimeout(function() {
+        resolve({ dataToClient: '123' })
+      }, 1000)
+    })
+  },
   computed: {
     currentLang() {
       return this.$store.state.locale
@@ -89,6 +99,9 @@ export default {
     currentLangShortName() {
       return this.langList.find(lang => lang.code === this.currentLang).shortName
     }
+  },
+  mounted() {
+    console.log('login mounted.')
   },
   methods: {}
 }

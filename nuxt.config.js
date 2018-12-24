@@ -19,7 +19,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'cyan' },
+  loading: '~/components/Loading.vue',
 
   /*
   ** Global CSS
@@ -56,18 +56,22 @@ module.exports = {
   fontawesome: {
     component: 'fa',
     imports: [
+      // 如果要使用更多圖示，請單一個的加入，以達到最小化目標
+      // fas 開頭的圖示加這
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      },
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
-      },
-      {
-        set: '@fortawesome/free-regular-svg-icons',
-        icons: ['far']
+        icons: ['faAngleDown']
       }
+      // fab 開頭的圖示加這
+      // {
+      //   set: '@fortawesome/free-brands-svg-icons',
+      //   icons: ['fab']
+      // },
+      // far 開頭的圖示加這
+      // {
+      //   set: '@fortawesome/free-regular-svg-icons',
+      //   icons: ['far']
+      // }
     ]
   },
   /*
