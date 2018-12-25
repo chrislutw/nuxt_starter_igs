@@ -1,8 +1,7 @@
 const pkg = require('./package')
 
-module.exports = {
+const settings = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -31,8 +30,10 @@ module.exports = {
   */
   plugins: ['~/plugins/i18n.js'],
 
+  env: { test: 123 },
+
   router: {
-    middleware: 'i18n'
+    middleware: ['testMiddle', 'i18n']
   },
 
   /*
@@ -83,6 +84,7 @@ module.exports = {
     */
     extend(config, ctx) {
       // Run ESLint on save
+      // console.log('webpack config: ', config)
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -91,6 +93,32 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // if (process.env.DEPLOY === 'preproduction') {
+      //   config.optimization.minimize = false
+      // }
+    },
+    terser: {
+      terserOptions: {
+        compress: { drop_console: true }
+      }
     }
   }
 }
+if (process.env.DEPLOY === 'preproduction') {
+  settings.vue = {
+    config: {
+      productionTip: true,
+      devtools: true
+    }
+  }
+  settings.build.terser = {
+    terserOptions: {
+      compress: { drop_debugger: false },
+      output: { comments: true }
+    }
+  }
+  settings.build.filenames = {
+    chunk: () => '[name].[chunkhash].js'
+  }
+}
+module.exports = settings

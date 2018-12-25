@@ -83,7 +83,7 @@ export default {
       passWord: ''
     }
   },
-  // server side code
+  // first loading is server side code, orther is client
   asyncData() {
     console.log('About Page is loading.')
     return new Promise(resolve => {
@@ -103,7 +103,12 @@ export default {
   mounted() {
     console.log('login mounted.')
   },
-  methods: {}
+  methods: {
+    test() {
+      console.log('test debugger')
+      debugger
+    }
+  }
 }
 </script>
 
