@@ -23,7 +23,7 @@ const settings = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['animate.css'],
 
   /*
   ** Plugins to load before mounting the App
