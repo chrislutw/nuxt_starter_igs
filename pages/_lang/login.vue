@@ -84,13 +84,16 @@ export default {
     }
   },
   // first loading is server side code, orther is client
-  asyncData() {
-    console.log('About Page is loading.')
-    return new Promise(resolve => {
-      setTimeout(function() {
-        resolve({ dataToClient: '123' })
-      }, 1000)
-    })
+  asyncData(context) {
+    if (process.server) {
+      console.log('About Page is loading. ')
+    } else {
+      return new Promise(resolve => {
+        setTimeout(function() {
+          resolve({ dataToClient: '123' })
+        }, 1000)
+      })
+    }
   },
   computed: {
     currentLang() {
@@ -101,12 +104,15 @@ export default {
     }
   },
   mounted() {
-    console.log('login mounted.')
+    console.log('login mounted.', window)
   },
   methods: {
     test() {
       console.log('test debugger')
       debugger
+    },
+    testwindow() {
+      console.log('login method.', window)
     }
   }
 }
