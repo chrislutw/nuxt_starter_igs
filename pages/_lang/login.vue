@@ -6,6 +6,7 @@
           <img src="~/assets/images/icon-lang-zh_Hans.png" alt>
           {{ currentLangShortName }}
           <fa icon="angle-down"/>
+          <fa :icon="['far', 'angry']"/>
         </a>
       </div>
     </div>
@@ -105,6 +106,7 @@ export default {
   },
   mounted() {
     console.log('login mounted.', window)
+    ;[1, 2, 3, 4, 5].includes(3)
   },
   methods: {
     test() {

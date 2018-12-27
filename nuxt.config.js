@@ -62,17 +62,17 @@ const settings = {
       {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['faAngleDown']
-      }
+      },
       // fab 開頭的圖示加這
       // {
       //   set: '@fortawesome/free-brands-svg-icons',
       //   icons: ['fab']
       // },
       // far 開頭的圖示加這
-      // {
-      //   set: '@fortawesome/free-regular-svg-icons',
-      //   icons: ['far']
-      // }
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['faAngry']
+      }
     ]
   },
   /*
@@ -93,9 +93,6 @@ const settings = {
           exclude: /(node_modules)/
         })
       }
-      // if (process.env.DEPLOY === 'preproduction') {
-      //   config.optimization.minimize = false
-      // }
     },
     terser: {
       terserOptions: {
