@@ -85,3 +85,47 @@ TweenLite.to(obj, 5, {
 <fa icon="angle-down" />
 <fa :icon="[far, calendar-alt]" />
 ```
+
+### monent, mement-timezone
+
+[documention](https://momentjs.com/)
+
+```js
+import Moment from 'moment-timezone'
+
+const nowTaipei = Moment.tz('Asia/Taipei')
+
+nowTaipei.weekday() // 星期一
+const maintainTimeStart = nowTaipei.clone().hour(9) // 複製一份時間，改時間9點
+const maintainTimeEnd = nowTaipei.clone().hour(12) // 複製一份時間，改時間12點
+
+// 現在是不是在維護時間
+nowTaipei.isBetween(maintainTimeStart, maintainTimeEnd)
+```
+
+### hi-base64, base64url
+
+[base64url documention](https://github.com/brianloveswords/base64url#readme)
+[hi-base64 documention](https://github.com/emn178/hi-base64)
+
+> Base64 有三个字符`+`、`/`和`=`，在 URL 里面有特殊含义，所以要被替换掉：`=`被省略、`+`替换成`-`，`/`替换成`_`
+
+```js
+import Base64 from 'hi-base64'
+import Base64url from 'base64url'
+
+const encodedString = Base64.encode('123abc')
+const decodedString = Base64.decode('hoih4ih2iuh')
+
+const encodedUrlString = Base64url.encode('123abc')
+const encodedUrlString = Base64url.decode('hoih4ih2iuh')
+
+const encodedUrlString = Base64url.fromBase64(encodedString)
+const encodedString = Base64url.toBase64(encodedUrlString)
+```
+
+### js-cookie
+
+### jssha
+
+### crypto-js
