@@ -23,6 +23,58 @@ $ npm start
 $ npm run generate
 ```
 
+## Docs generate Step
+
+[documention](https://github.com/Kocal/jsdoc-vuejs#readme)
+
+write comment example
+
+```html
+<template>
+  <div>Hello world!</div>
+</template>
+
+<script>
+/**
+ * @vue-prop {Number} initialCounter - Initial counter's value
+ * @vue-prop {Number} [step=1] - Step
+ * @vue-data {Number} counter - Current counter's value
+ * @vue-computed {String} message
+ */
+export default {
+  props: {
+    initialCounter: {
+      type: Number,
+      required: true,
+    },
+    step: {
+      type: Number,
+      default: 1,
+    },
+  },
+  data () {
+    return {
+      counter: 0,
+    }
+  },
+  computed: {
+    message() {
+      return `Current value is ${this.counter}`;
+    }
+  }
+}
+</script>
+```
+
+Generate Docs
+
+```bash
+# generate
+$ npm run doc
+```
+
+file location `/docs/projcetName/tag/index.html`
+
 ## Usage
 
 各套件使用方式

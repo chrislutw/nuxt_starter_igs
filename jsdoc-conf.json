@@ -20,7 +20,7 @@
     "syntaxTheme": "dark",
     "dateFormat": "YYYY/MM/DD",
     "systemName": "WebTeamDoc",
-    "copyright": "IGS RD6 WebTeam Copyright © 2018 The Contributors to CloudArcade project."
+    "copyright": "IGS RD6 WebTeam Copyright © 2018 The Contributors to xxx project."
   },
   "opts": {
     "destination": "docs/",
