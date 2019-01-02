@@ -126,6 +126,43 @@ const encodedString = Base64url.toBase64(encodedUrlString)
 
 ### js-cookie
 
+[documention](https://github.com/js-cookie/js-cookie#readme)
+
+```js
+import Cookies from 'js-cookie'
+
+Cookies.set('name', 'value')
+Cookies.set('name', 'value', { expires: 7, path: '' })
+
+Cookies.get('name') // => 'value'
+Cookies.get('nothing') // => undefined
+
+Cookies.remove('name')
+```
+
 ### jssha
 
-### crypto-js
+[documention](https://github.com/Caligatio/jsSHA)
+
+```js
+const shaObj = new JSSHA('SHA-1', 'TEXT')
+shaObj.setHMACKey('secretKey', 'TEXT')
+shaObj.update('encoding content')
+const shaString = shaObj.getHMAC('HEX')
+```
+
+### crypto-js AES
+
+[documention](https://github.com/brix/crypto-js)
+
+```js
+import { AES, enc as cryptoEnc, mode as cryptoMode } from 'crypto-js'
+
+const key = 'secret key 123'
+const content = 'abc123'
+const aesStr = AES.encrypt(content, key, { mode: cryptoMode.ECB }).toString()
+
+const oriBytes = AES.decrypt(aesStr, key)
+const oriText = oriBytes.toString(cryptoEnc.Utf8)
+console.log(content === oriText)
+```
