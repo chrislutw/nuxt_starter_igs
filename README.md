@@ -79,6 +79,26 @@ file location `/docs/projcetName/tag/index.html`
 
 各套件使用方式
 
+### 圖片引用
+
+```scss
+// css, scss
+.main {
+  background: url('~assets/images/pic.png');
+}
+```
+
+```html
+<!-- html -->
+<img src="~/assets/images/pic.png"/>
+```
+
+```js
+// js, vue
+import pic from '~/assets/images/pic.png'
+require('~/assets/images/pic.png')
+```
+
 ### Axios
 
 [documention](https://axios.nuxtjs.org/usage)
