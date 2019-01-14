@@ -56,21 +56,8 @@
 </template>
 
 <script>
-const componentName = 'login'
-/**
- * @module Index/Login
- * @vue-data {boolean} showLangMenu=false - 語言列開關
- * @vue-data {Object[]} langList - 語言列表
- * @vue-data {String} langList[].shortName - 簡稱
- * @vue-data {String} langList[].name - 全名
- * @vue-data {String} langList[].code - 英文代碼
- * @vue-data {String} userName='' - 帳號
- * @vue-data {String} passWord='' - 密碼
- * @vue-computed {String} currentLangShortName - 目前語言簡稱
- * @vue-computed {String} currentLang - 目前語言代碼
- */
 export default {
-  name: componentName,
+  name: 'Login',
 
   data() {
     return {
