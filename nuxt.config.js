@@ -28,12 +28,12 @@ const settings = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [],
 
   env: { test: 123 },
 
   router: {
-    middleware: ['testMiddle', 'i18n']
+    middleware: ['testMiddle']
   },
 
   /*
@@ -43,7 +43,21 @@ const settings = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          { code: 'cn', iso: 'zh_CN', file: 'cn.js' },
+          { code: 'en', iso: 'en_US', file: 'en.js' },
+          { code: 'tw', iso: 'zh_TW', file: 'tw.js' }
+        ],
+        langDir: 'locales/',
+        strategy: 'prefix_and_default',
+        lazy: true,
+        defaultLocale: 'tw'
+      }
+    ]
   ],
   /*
   ** Axios module configuration

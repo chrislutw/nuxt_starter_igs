@@ -39,8 +39,10 @@
     "md5": "^2.2.1",
     "moment": "^2.23.0",
     "moment-timezone": "^0.5.23",
+    "nuxt": "^2.3.4",
     "nuxt-edge": "latest",
     "nuxt-fontawesome": "^0.3.0",
+    "nuxt-i18n": "^5.4.4",
     "qrcode": "^1.3.2",
     "superagent": "^4.1.0",
     "vue-i18n": "^8.5.0"

@@ -8,7 +8,7 @@ export default function({ isHMR, app, store, route, params, error, redirect }) {
     return error({ message: 'This page could not be found.', statusCode: 404 })
   }
   // Set locale
-  store.commit('SET_LANG', locale)
+  store.commit('I18N_SET_LOCALE', locale)
   app.i18n.locale = store.state.locale
   // If route is /<defaultLocale>/... -> redirect to /...
   if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
