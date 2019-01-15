@@ -53,7 +53,7 @@ const settings = {
           { code: 'tw', iso: 'zh_TW', file: 'tw.js' }
         ],
         langDir: 'locales/',
-        strategy: 'prefix_and_default',
+        strategy: 'prefix_except_default',
         lazy: true,
         defaultLocale: 'tw'
       }
