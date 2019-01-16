@@ -238,3 +238,23 @@ const oriBytes = AES.decrypt(aesStr, key)
 const oriText = oriBytes.toString(cryptoEnc.Utf8)
 console.log(content === oriText)
 ```
+
+### Portal-Vue
+
+[documention](https://github.com/LinusBorg/portal-vue/blob/develop/docs/guide.md)
+
+component A
+
+```html
+<portal to="destination">
+  <p>This slot content will be rendered wherever the with name 'destination' is located.</p>
+</portal>
+```
+
+component B
+
+```html
+<portal-target name="destination"/>
+<!-- component A content will append to here -->
+</portal-target>
+```

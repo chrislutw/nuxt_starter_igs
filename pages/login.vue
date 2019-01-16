@@ -23,6 +23,10 @@
       </ul>
     </transition>
     <div class="login-body">
+      <portal to="menupopup">
+        <div class="menu-popup">我是在login裡的menuPopup</div>
+        <div class="menu-popup">我是在login裡的menuPopup2</div>
+      </portal>
       <div class="member-face">
         <img src="~/assets/images/icon-member.png" alt>
       </div>

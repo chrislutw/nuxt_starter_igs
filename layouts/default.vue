@@ -1,6 +1,7 @@
 <template>
   <div>
     <nuxt/>
+    <portal-target name="menupopup"/>
   </div>
 </template>
 

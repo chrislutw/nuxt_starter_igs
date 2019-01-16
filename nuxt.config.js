@@ -44,6 +44,7 @@ const settings = {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     'nuxt-fontawesome',
+    'portal-vue/nuxt',
     [
       'nuxt-i18n',
       {
