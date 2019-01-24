@@ -33,7 +33,7 @@ const settings = {
   env: { test: 123 },
 
   router: {
-    middleware: ['testMiddle']
+    middleware: ['exampleMiddle']
   },
 
   /*

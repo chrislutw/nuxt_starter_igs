@@ -1,6 +1,19 @@
-# test1
+# Nuxt Starter For IGS webteam
 
-> Nuxt + Express starter
+> Nuxt + Express starter feature
+>
+> - Animate: GSAP, Animate.css
+> - Fontaswsome
+> - Monent
+> - help function: deepmerge
+> - js-cookie
+> - Portal-Vue
+> - Nuxt-i18n
+> - encode decode tool: hi-base64, base64url, jssha, crypto-js AES, md5
+> - test tool: @vue/test-utils, jest
+> - eslint
+> - prettier
+> - JSDoc
 
 ## Build Setup
 
